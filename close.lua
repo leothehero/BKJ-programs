@@ -40,6 +40,13 @@ elseif args[1] == "ViewDoors" then
             --io.stderr:write("User is unauthorised to open these doors.")
         --end
     --end
+elseif args[1] == "Security" then
+    local response = component.os_doorcontroller.close(args[2])
+    if response[1][1] then
+        print("Closing")
+    else
+        io.stderr:write("Could not close, reason: ".. tostring(response[1][2]))
+    end
 elseif args[1] == nil then
     io.stderr:write("Please specify a door to close")
 else
