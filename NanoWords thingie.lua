@@ -1,0 +1,40 @@
+a=
+table.pack(
+	table.pack(
+		table.pack(1,0,0,1,6,0,"stone",6),
+		table.pack(2,6,0,3,6,0,"stone",6),
+		table.pack(2,3,0,3,3,0,"stone",6),
+		table.pack(2,0,0,3,0,0,"stone",6),
+		table.pack(4,1,0,4,2,0,"stone",6),
+		table.pack(4,4,0,4,5,0,"stone",6)
+	),
+	table.pack(
+		table.pack(6,0,0,6,6,0,"stone",6),
+		table.pack(7,6,0,8,6,0,"stone",6),
+		table.pack(7,3,0,8,3,0,"stone",6),
+		table.pack(9,4,0,9,5,0,"stone",6),
+		table.pack(9,0,0,9,2,0,"stone",6)
+	),
+	table.pack(
+		table.pack(11,6,0,15,6,0,"stone",6),
+		table.pack(11,0,0,15,0,0,"stone",6),
+		table.pack(13,1,0,13,5,0,"stone",6)
+	),
+	table.pack(
+		table.pack(17,1,0,17,5,0,"stone",6),
+		table.pack(18,6,0,20,6,0,"stone",6),
+		table.pack(18,0,0,19,0,0,"stone",6),
+		table.pack(20,1,0,20,3,0,"stone",6),
+		table.pack(19,3,0,19,3,0,"stone",6)
+	),
+	table.pack(
+		table.pack(22,0,0,22,6,0,"stone",6),
+		table.pack(25,0,0,25,6,0,"stone",6),
+		table.pack(23,3,0,24,3,0,"stone",6)
+	),
+	table.pack(
+		table.pack(29,0,0,29,5,0,"stone",6),
+		table.pack(27,6,0,31,6,0,"stone",6)
+	)
+)
+for k,element in ipairs(a) do for k,element2 in ipairs(element) do component.os_nanofog_terminal.setArea(table.unpack(element2)) os.sleep(0.5) end end
